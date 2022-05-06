@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "fire_chess_mod:block/combustible_block_blue"
+	}
+}

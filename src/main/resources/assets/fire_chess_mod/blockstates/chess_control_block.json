@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=south,part=left": { "model": "fire_chess_mod:block/chess_control_block", "y": 180},
+	"facing=east,part=left": { "model": "fire_chess_mod:block/chess_control_block", "y": 90},
+	"facing=north,part=left": { "model": "fire_chess_mod:block/chess_control_block"},
+	"facing=west,part=left": { "model": "fire_chess_mod:block/chess_control_block", "y": 270},
+	"facing=south,part=right": { "model": "fire_chess_mod:block/chess_control_block", "x": 180},
+	"facing=east,part=right": { "model": "fire_chess_mod:block/chess_control_block", "x": 180, "y": 270},
+	"facing=north,part=right": { "model": "fire_chess_mod:block/chess_control_block", "x": 180, "y": 180},
+	"facing=west,part=right": { "model": "fire_chess_mod:block/chess_control_block", "x": 180, "y": 90}
+  }
+}

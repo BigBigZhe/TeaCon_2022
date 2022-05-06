@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="All rights reserved"
+[[mods]]
+modId="fire_chess_mod"
+version="${file.jarVersion}"
+displayName="Fire Chess Mod"
+logoFile="examplemod.png"
+credits="Thanks for this example mod goes to Java"
+authors="BigBig_Zhe"
+description='''
+
+'''
+[[dependencies.fire_chess_mod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    ordering="NONE"
+    side="BOTH"
+# Here's another dependency
+[[dependencies.fire_chess_mod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"

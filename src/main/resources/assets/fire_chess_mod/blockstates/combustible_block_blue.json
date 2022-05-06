@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "fire_chess_mod:block/combustible_block_blue" }
+  }
+}

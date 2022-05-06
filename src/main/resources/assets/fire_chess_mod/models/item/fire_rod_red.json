@@ -1,0 +1,6 @@
+{
+    "parent": "builtin/generated",
+    "textures": {
+        "layer0": "fire_chess_mod:item/fire_rod_red"
+    }
+}
