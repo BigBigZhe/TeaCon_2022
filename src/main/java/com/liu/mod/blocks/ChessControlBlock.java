@@ -81,7 +81,7 @@ public class ChessControlBlock extends HorizontalDirectionalBlock implements Ent
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return type == EverythingLoader.CHESS_CONTROL_BLOCK_ENTITY.get() && level.isClientSide ? ChessControlBlockEntity::tick : null;
+        return type == EverythingLoader.CHESS_CONTROL_BLOCK_ENTITY.get() && !level.isClientSide ? ChessControlBlockEntity::serverTick : null;
     }
 
     private Direction getDir(Direction direction) {
