@@ -42,15 +42,17 @@ public class ChessControlBlock extends HorizontalDirectionalBlock implements Ent
     }
 
     public InteractionResult use(BlockState p_51357_, Level p_51358_, BlockPos p_51359_, Player p_51360_, InteractionHand p_51361_, BlockHitResult p_51362_) {
-        if (p_51358_.isClientSide) {
+        if (!p_51358_.isClientSide) {
             Item item = p_51360_.getMainHandItem().getItem();
             BlockEntity entity = p_51358_.getBlockEntity(p_51359_);
             if (entity instanceof ChessControlBlockEntity) {
                 if (item == EverythingLoader.WRENCH.get()) {
-                    ((ChessControlBlockEntity) entity).reset(p_51357_.getValue(FACING), p_51357_.getValue(PART) == ControlPart.RIGHT ? p_51359_.relative(getDir(p_51357_.getValue(FACING)).getOpposite()) : p_51359_);
-                }
-                if (item instanceof AirItem) {
-                    ((ChessControlBlockEntity) entity).changeManToMan();
+                    if (!p_51360_.isCrouching()) {
+                        ((ChessControlBlockEntity) entity).reset(p_51357_.getValue(PART) == ControlPart.RIGHT ? p_51359_.relative(getDir(p_51357_.getValue(FACING)).getOpposite()) : p_51359_);
+                    }
+                    else{
+                        ((ChessControlBlockEntity) entity).changeManToMan();
+                    }
                 }
             }
         }
